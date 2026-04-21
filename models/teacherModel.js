@@ -1,8 +1,17 @@
 const db = require("../config/db");
 
 exports.createTeacher = (data, callback) => {
-  const sql = `INSERT INTO teachers (name, phone, email) VALUES (?, ?, ?)`;
-  db.query(sql, [data.name, data.phone, data.email], callback);
+  const sql = `
+    INSERT INTO users (name, phone, email, password, role)
+    VALUES (?, ?, ?, ?, 'teacher')
+  `;
+
+  db.query(sql, [
+    data.name,
+    data.phone,
+    data.email,
+    "123456" // default password
+  ], callback);
 };
 
 exports.getTeachers = (callback) => {
