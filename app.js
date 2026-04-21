@@ -13,7 +13,7 @@ const timetableRoutes = require("./routes/timetableRoutes");
 const app = express();
 
 app.use(cors({
-  origin: ["https://your-vercel-app.vercel.app"],
+  origin: ["https://school-ms-fronend.vercel.app/"],
   credentials: true
 }));
 
