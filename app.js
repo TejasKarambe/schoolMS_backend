@@ -12,7 +12,6 @@ const timetableRoutes = require("./routes/timetableRoutes");
 
 const app = express();
 
-const cors = require("cors");
 
 app.use(cors({
   origin: [
